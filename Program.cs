@@ -1,36 +1,23 @@
-﻿Console.WriteLine("Welcome to flip coin");
-Console.WriteLine("Write Number of time wants to flip coin ");
-int head = 0;
-int numOfTimeCoinIstail = 0;
-int numOfTimeCoinIsHead = 0;
-int num = Convert.ToInt32(Console.ReadLine());
-int[] coin = new int[num];
-for (int i = 0; i < coin.Length; i++)
+﻿Console.WriteLine("Write three numbers");
+int num1 = Convert.ToInt32(Console.ReadLine());
+int num2 = Convert.ToInt32(Console.ReadLine());
+int num3 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("num1 : " + num1);
+Console.WriteLine("num2 : " + num2);
+Console.WriteLine("num3 : " + num3);
+if (num1 > num2 && num1 > num3)
 {
-    Random rnd = new Random();
-    int flipCoin = rnd.Next(2);
-    Console.WriteLine("flipCoin : " + flipCoin);
-    
-    if (flipCoin <= head)
-    {
-        Console.WriteLine("coin is head");
-        numOfTimeCoinIsHead = numOfTimeCoinIsHead + 1;
-        Console.WriteLine("numOfTimeCoinIsHead : " + numOfTimeCoinIsHead);
-    }
-    else
-    {
-        Console.WriteLine("coin is tail");
-        numOfTimeCoinIstail = numOfTimeCoinIstail + 1;
-        Console.WriteLine("numOfTimeCoinIstail : " + numOfTimeCoinIstail);
-    }
-
+    Console.WriteLine("Greatest Number : " + num1);
 }
-        Console.WriteLine(numOfTimeCoinIsHead);
-        Console.WriteLine(numOfTimeCoinIstail);
-    int percentageOfHead = (numOfTimeCoinIsHead *100 / num);
-        Console.WriteLine("percentageOfHead : " + percentageOfHead);
-    int percentageOfTail = (numOfTimeCoinIstail * 100 / num);
-        Console.WriteLine("percentageOfTail : " + percentageOfTail);
-        Console.Read();
-
-
+else if (num2 > num1 && num2 > num3)
+{
+    Console.WriteLine("Greatest number : " + num2);
+}
+else if (num3 > num1 && num3 > num2)
+{
+    Console.WriteLine("Greatest Number : " + num3);
+}
+else
+{
+    Console.WriteLine("All three numbers are equal");
+}
